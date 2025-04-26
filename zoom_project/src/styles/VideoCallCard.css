@@ -1,0 +1,42 @@
+.video-call-card {
+    display: flex;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+
+.video-call-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.video-call-details p {
+    margin: 5px 0;
+    color: #444;
+}

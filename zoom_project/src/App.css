@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../public/myfont/soria-font.ttf') format('truetype'); /* Adjust the path as necessary */
+}
+
+body {
+  font-family: 'MyCustomFont', sans-serif; /* Apply the font */
+  /* height: 100vh;
+  width: 100vw;
+  background: url(../public/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem; */
+}
+
+
+* {
+  color: rgb(0, 0, 0);
+  font-family: 'MyCustomFont', sans-serif;
+  letter-spacing: 0.8px;
+}
