@@ -56,25 +56,25 @@ const Dashboard = () => {
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       {/* Header with user info */}
-      <Paper 
-        elevation={3} 
-        sx={{ 
-          p: 3, 
-          mb: 4, 
-          display: 'flex', 
+      <Paper
+        elevation={3}
+        sx={{
+          p: 3,
+          mb: 4,
+          display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          background: 'linear-gradient(to right, #3f51b5, #5c6bc0)'
+          background: 'linear-gradient(90deg, rgb(79, 3, 112), white 180%)'
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Avatar 
-            sx={{ 
-              width: 60, 
-              height: 60, 
-              bgcolor: '#fff', 
+          <Avatar
+            sx={{
+              width: 60,
+              height: 60,
+              bgcolor: '#fff',
               color: '#3f51b5',
-              mr: 2 
+              mr: 2
             }}
           >
             <PersonIcon fontSize="large" />
@@ -88,11 +88,11 @@ const Dashboard = () => {
             </Typography>
           </Box>
         </Box>
-        <IconButton 
-          onClick={handleLogout} 
-          sx={{ 
+        <IconButton
+          onClick={handleLogout}
+          sx={{
             color: 'white',
-            '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' } 
+            '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' }
           }}
           title="Logout"
         >
@@ -104,11 +104,11 @@ const Dashboard = () => {
       <Grid container spacing={4}>
         {/* Start a new meeting card */}
         <Grid item xs={12} md={6}>
-          <Card 
-            elevation={3} 
-            sx={{ 
-              height: '100%', 
-              display: 'flex', 
+          <Card
+            elevation={3}
+            sx={{
+              height: '100%',
+              display: 'flex',
               flexDirection: 'column',
               transition: 'transform 0.2s',
               '&:hover': { transform: 'scale(1.02)' }
@@ -124,12 +124,15 @@ const Dashboard = () => {
               </Typography>
             </CardContent>
             <CardActions sx={{ justifyContent: 'center', pb: 3 }}>
-              <Button 
-                variant="contained" 
-                size="large" 
+              <Button
+                variant="contained"
+                size="large"
                 onClick={handleStartMeeting}
                 startIcon={<VideoCallIcon />}
-                sx={{ px: 4 }}
+                sx={{
+                  px: 4,
+                  bgcolor: 'rgb(79, 3, 112)'
+                }}
               >
                 Start Meeting
               </Button>
@@ -139,11 +142,11 @@ const Dashboard = () => {
 
         {/* Join existing meeting card */}
         <Grid item xs={12} md={6}>
-          <Card 
-            elevation={3} 
-            sx={{ 
-              height: '100%', 
-              display: 'flex', 
+          <Card
+            elevation={3}
+            sx={{
+              height: '100%',
+              display: 'flex',
               flexDirection: 'column',
               transition: 'transform 0.2s',
               '&:hover': { transform: 'scale(1.02)' }
@@ -166,13 +169,16 @@ const Dashboard = () => {
                   onChange={(e) => setMeetingCode(e.target.value)}
                   sx={{ mb: 2 }}
                 />
-                <Button 
-                  type="submit" 
-                  variant="contained" 
+                <Button
+                  type="submit"
                   size="large"
                   disabled={!meetingCode.trim()}
                   startIcon={<MeetingRoomIcon />}
-                  sx={{ px: 4 }}
+                  sx={{
+                    px: 4,
+                    bgcolor: 'rgb(79, 3, 112)',
+                    color: 'white',
+                  }}
                 >
                   Join Meeting
                 </Button>
@@ -183,9 +189,9 @@ const Dashboard = () => {
 
         {/* Meeting history card */}
         <Grid item xs={12}>
-          <Card 
-            elevation={3} 
-            sx={{ 
+          <Card
+            elevation={3}
+            sx={{
               transition: 'transform 0.2s',
               '&:hover': { transform: 'scale(1.01)' }
             }}
@@ -203,8 +209,8 @@ const Dashboard = () => {
               </Typography>
             </CardContent>
             <CardActions sx={{ justifyContent: 'flex-end', p: 3, pt: 0 }}>
-              <Button 
-                variant="outlined" 
+              <Button
+                variant="outlined"
                 onClick={handleViewHistory}
                 startIcon={<HistoryIcon />}
               >

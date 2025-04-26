@@ -78,7 +78,7 @@ const MeetingHistory = () => {
 
     return (
         <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
-            <Paper elevation={3} sx={{ p: 3, mb: 4, background: 'linear-gradient(to right, #3f51b5, #5c6bc0)' }}>
+            <Paper elevation={3} sx={{ p: 3, mb: 4, background: 'linear-gradient(90deg, rgb(79, 3, 112), white 180%)' }}>
                 <Typography variant="h4" sx={{ color: 'white', fontWeight: 'bold' }}>
                     Meeting History
                 </Typography>
